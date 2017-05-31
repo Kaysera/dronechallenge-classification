@@ -15,8 +15,8 @@
 	$blue=2;
 	$order=2;
 	$base=1;
-	$laptime='00:30:00';
-	$sql="INSERT INTO REGISTROS (TEAM,TRACK,RED,GREEN,BLUE,ORDER,BASE,LAP_TIME) VALUES ($team,$track,$red,$green,$blue,$order,$base,$laptime)";	
+	$laptime='00:30:00';	
+	$sql="INSERT INTO REGISTROS (TEAM,TRACK,RED,GREEN,BLUE,ORDER,BASE,LAP_TIME) VALUES (\"".$team."\",\"".$track."\",$red,$green,$blue,$order,$base,\"".$laptime."\")";	
 	if(!(mysql_query($sql))){
 						$response['success']=0;
 						die('Error: no se pudo ejecutar la consulta');
