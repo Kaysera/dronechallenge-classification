@@ -36,5 +36,6 @@
 						$response['success']=1;
 					}
 	mysql_close($iden);
+	header('Location: ../html/Formulario.html');
 ?>
 
