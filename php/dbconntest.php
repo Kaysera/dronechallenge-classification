@@ -10,7 +10,18 @@
 	mysql_select_db($database);
 	$team = $_GET['Equipo'];
 	$track=$_GET['Circuito'];
-	$red=2;
+	$rojo=$_GET['Rojo'];
+	$verde=$_GET['Verde'];
+	$azul=$_GET['Azul'];
+	$orden=$_GET['Order'];
+	$vuelta=$_GET['Base'];
+	if (rojo == 'On'){
+		$red = 2;
+
+	}else{
+		$red = 0;
+	}
+	//$red=2;
 	$green=2;
 	$blue=2;
 	$order=2;
