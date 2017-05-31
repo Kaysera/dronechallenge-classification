@@ -1,3 +1,9 @@
-* {
+h1 {
+	font-size: 250%;
 	text-align: center;
+}	
+
+p {
+	text-align: center;
+	font-size: 150%;
 }
