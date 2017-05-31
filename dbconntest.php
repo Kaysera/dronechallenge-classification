@@ -2,7 +2,7 @@
 	$dbhost='localhost';
 	$dbuser='root';
 	$dbpass='dronechallenge';
-	$database='prueba';
+	$database='ranking';
 	$reponse=array();
 	if(!($iden=mysql_connect($dbhost,$dbuser,$dbpass))){
 		die('Error: no se pudo conectar con la base de datos');
