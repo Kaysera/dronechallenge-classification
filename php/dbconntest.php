@@ -14,20 +14,16 @@
 	$verde=$_GET['Verde'];
 	$azul=$_GET['Azul'];
 	$orden=$_GET['Order'];
-	$vuelta=$_GET['Base'];
-	if ($rojo == 'on'){
-		$red = 2;
+	$vuelta=$_GET['Base'];		
+	$laptime=$_GET['Tiempo'];
 
-	}else{
-		$red = 0;
-	}
-	//$red=2;
-	$green=2;
-	$blue=2;
-	$order=2;
-	$base=1;
-	$laptime=$_GET['Tiempo'];	
-	$sql="INSERT INTO `REGISTROS` (`TEAM`,`TRACK`,`RED`,`GREEN`,`BLUE`,`ORDER`,`BASE`,`LAP_TIME`) VALUES (\"".$rojo."\",\"".$track."\",$red,$green,$blue,$order,$base,\"".$laptime."\")";	
+	if ($rojo) $red = 2;	
+	if ($verde) $green = 2;	
+	if ($azul == 'on') $blue = 2;	
+	if ($orden == 'on')	$order = 2;	
+	if ($vuelta == 'on') $base = 1;	
+	
+	$sql="INSERT INTO `REGISTROS` (`TEAM`,`TRACK`,`RED`,`GREEN`,`BLUE`,`ORDER`,`BASE`,`LAP_TIME`) VALUES (\"".$team."\",\"".$track."\",$red,$green,$blue,$order,$base,\"".$laptime."\")";	
 	if(!(mysql_query($sql))){
 						$response['success']=0;
 						die('Error: no se pudo ejecutar la consulta');
