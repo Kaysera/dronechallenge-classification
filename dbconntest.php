@@ -19,6 +19,7 @@
 	$sql="INSERT INTO `REGISTROS` (`RED`,`GREEN`,`BLUE`,`ORDER`,`BASE`) VALUES ($red,$green,$blue,$order,$base)";	
 	if(!(mysql_query($sql))){
 		
+		
 						$response['success']=0;
 						die('Error: no se pudo ejecutar la consulta');
 					}else{
