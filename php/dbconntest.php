@@ -15,7 +15,7 @@
 	$azul=$_GET['Azul'];
 	$orden=$_GET['Order'];
 	$vuelta=$_GET['Base'];
-	if (rojo == 'On'){
+	if (rojo == 'on'){
 		$red = 2;
 
 	}else{
