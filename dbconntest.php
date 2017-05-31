@@ -2,7 +2,7 @@
 	$dbhost='localhost';
 	$dbuser='root';
 	$dbpass='dronechallenge';
-	$database='prueba';
+	$database='ranking';
 	$reponse=array();
 	if(!($iden=mysql_connect($dbhost,$dbuser,$dbpass))){
 		die('Error: no se pudo conectar con la base de datos');
@@ -16,7 +16,7 @@
 	$order=2;
 	$base=1;
 	$laptime='00:30:00';	
-	$sql="INSERT INTO `REGISTROS`(`RED`) VALUES ($red)";	
+	$sql="INSERT INTO `REGISTROS`(`RED`) VALUES (2)";	
 	if(!(mysql_query($sql))){
 						$response['success']=0;
 					//	echo 'cosa'
