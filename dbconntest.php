@@ -16,7 +16,7 @@
 	$order=2;
 	$base=1;
 	$laptime='00:30:00';	
-	$sql="INSERT INTO `REGISTROS` (`RED`,`GREEN`,`BLUE`,`ORDER`,`BASE`) VALUES ($red,$green,$blue,$order,$base)";	
+	$sql="INSERT INTO `REGISTROS` (`TEAM`,`RED`,`GREEN`,`BLUE`,`ORDER`,`BASE`) VALUES (\"".$team."\",$red,$green,$blue,$order,$base)";	
 	if(!(mysql_query($sql))){
 						$response['success']=0;
 						die('Error: no se pudo ejecutar la consulta');
