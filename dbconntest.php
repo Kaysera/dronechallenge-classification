@@ -19,10 +19,10 @@
 	$sql="INSERT INTO `REGISTROS`(`RED`) VALUES ($red)";	
 	if(!(mysql_query($sql))){
 						$response['success']=0;
-						echo "cosa"
+					//	echo 'cosa'
 						die('Error: no se pudo ejecutar la consulta');
 					}else{
-						echo "Viva"
+				//		echo Viva
 					}
 	mysql_close($iden);
 ?>
