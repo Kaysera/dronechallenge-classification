@@ -9,7 +9,7 @@ p {
 }
 
 div{
-	width: 15%;
+	display=inline-block
 	margin: 0 auto;
 	font-size: 170%;
 }
