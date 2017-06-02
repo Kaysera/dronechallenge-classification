@@ -2,25 +2,20 @@
 <html>
 	<head>
 		<title>Formulario Puntuaciones ESII Drone Challenge</title>
-		<link rel="stylesheet" type="text/css" href="../css/Form.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
 	</head>
-	
-	<style>
-	.content {
-		max-width: 500px;
-		margin: auto;
-	}
-	</style>
+
 	
 	<body>
 		<div class="jumbotron text-center">
 			<h1>Formulario Puntuaciones ESII Drone Challenge</h1>
 		</div>
-		<div class="content">
-		<div  class="container">
+		<div>
+		<div  class="container-fluid">
+		
 			<div class="col-sm-6 col-md-3 col-xs-6">
 				<form action="../php/dbconntest.php" id="ranking">
 				<div class="form-group">
@@ -73,7 +68,7 @@
 					<br>
 					
 					<div class="form-group">
-						<label for="tyme"><h4>Tiempo(HH:MM:SS.DCM):</h4></label>
+						<label for="tyme"><h4>Tiempo(MM:SS.DCM):</h4></label>
 						<input type="text" name="Tiempo" class="form-control" id="tyme" autocomplete="off">
 					</div>
 					<div>
@@ -85,7 +80,6 @@
 			</div>
 		</div>
 		</div>
-
 	<body>
 
 </html>
