@@ -11,69 +11,70 @@
 		<div class="jumbotron text-center">
 			<h1>Formulario Puntuaciones ESII Drone Challenge</h1>
 		</div>
-		
-		<div class="panel panel-default">
-			<p>
-				Equipo:
-					<select name="Equipo" form="ranking">
-						<option>Equipo 1</option>
-						<option>Equipo 2</option>
-						<option>Equipo 3</option>
-						<option>Equipo 4</option>
-						<option>Equipo 5</option>
-					</select>
-			</p>
-		</div>
-		<div class="panel panel-default">
-			<p>
-				Circuito:
-					<select name="Circuito" form="ranking">
-						<option>Circuito 1</option>
-						<option>Circuito 2</option>
-						<option>Circuito 3</option>
-						<option>Circuito 4</option>
-						<option>Circuito 5</option>
-					</select>
-			</p>
-		</div>
-		
-		
-		<form action="../php/dbconntest.php" id="ranking">
-			<p>
-				Seleccionar Objetivos:<br>
-				<div class="panel panel-default">
-					<div id="rojo" class="panel panel-danger">
-						<div class="panel-heading"><input type="checkbox" name="Rojo" >  Marco Rojo<br></div>
-					</div>
-					
-					<div id="verde" class="panel panel-success"> 
-						<div class="panel-heading"><input type="checkbox" name="Verde">  Marco Verde<br></div>
-					</div>
-					
-					<div id="azul" class="panel panel-info">
-						<div class="panel-heading"><input type="checkbox" name="Azul" >  Marco Azul<br></div>
-					</div>
-					
-					<div id="orden" class="panel panel-warning">
-						<div class="panel-heading"><input type="checkbox" name="Order">  En Orden<br></div>
-					</div>
-					
-					<div id="base" class="panel panel-warning">	
-						<div class="panel-heading"><input type="checkbox" name="Base">  Base<br></div>
-					</div>
-				</div>
-			</p>
-			
-			<div class="form-group">
-				<label for="tyme">Tiempo(HH:MM:SS.DCM):</label>
-				<input type="text" name="Tiempo" class="form-control" id="tyme">
+		<div class="col-sm-3 col-md-6" id=marcadores>
+			<div class="panel panel-default" class="col-sm-3 col-md-6">
+				<p>
+					Equipo:
+						<select name="Equipo" form="ranking">
+							<option>Equipo 1</option>
+							<option>Equipo 2</option>
+							<option>Equipo 3</option>
+							<option>Equipo 4</option>
+							<option>Equipo 5</option>
+						</select>
+				</p>
 			</div>
 			<div class="panel panel-default">
 				<p>
-					<input type="submit" value="Enviar la informacion" class="btn btn-primary">
+					Circuito:
+						<select name="Circuito" form="ranking">
+							<option>Circuito 1</option>
+							<option>Circuito 2</option>
+							<option>Circuito 3</option>
+							<option>Circuito 4</option>
+							<option>Circuito 5</option>
+						</select>
 				</p>
 			</div>
 			
+			
+			<form action="../php/dbconntest.php" id="ranking">
+				<p>
+					Seleccionar Objetivos:<br>
+					
+					<div class="panel panel-default">
+						<div id="rojo" class="panel panel-danger">
+							<div class="panel-heading" ><input type="checkbox" name="Rojo" >  Marco Rojo<br></div>
+						</div>
+						
+						<div id="verde" class="panel panel-success"> 
+							<div class="panel-heading"><input type="checkbox" name="Verde">  Marco Verde<br></div>
+						</div>
+						
+						<div id="azul" class="panel panel-info">
+							<div class="panel-heading"><input type="checkbox" name="Azul" >  Marco Azul<br></div>
+						</div>
+						
+						<div id="orden" class="panel panel-warning">
+							<div class="panel-heading"><input type="checkbox" name="Order">  En Orden<br></div>
+						</div>
+						
+						<div id="base" class="panel panel-warning">	
+							<div class="panel-heading"><input type="checkbox" name="Base">  Base<br></div>
+						</div>
+					</div>
+				</p>
+				
+				<div class="form-group">
+					<label for="tyme">Tiempo(HH:MM:SS.DCM):</label>
+					<input type="text" name="Tiempo" class="form-control" id="tyme">
+				</div>
+				<div class="panel panel-default">
+					<p>
+						<input type="submit" value="Enviar la informacion" class="btn btn-primary">
+					</p>
+				</div>
+		</div>		
 		</form>
 
 	<body>
