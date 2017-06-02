@@ -15,7 +15,11 @@
 	$azul=$_GET['Azul'];
 	$orden=$_GET['Order'];
 	$vuelta=$_GET['Base'];		
-	$laptime="00:" . mysql_real_escape_string($_GET['Tiempo']);
+	$laptime=mysql_real_escape_string($_GET['Tiempo']);
+	$minutes=intval($laptime/60);
+	$precission=round(($laptime-intval($laptime))*1000);
+	$laptime=$laptime%60;
+	$laptime="00:".$minutes.":".$laptime.".".$precission;
 	$red=0;
 	$green=0;
 	$blue=0;

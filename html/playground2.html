@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dronechallenge Classification Playground</title>
+</head>
+<body>
+
+	<h1>Playground</h1>
+		<div id="myDIV">This is a simple div</div>
+		<p>This is a second simple paragraph</p>
+	<button type="button" onClick="myFunction()">Click Me!</button>
+	<script>
+	var conn = new WebSocket('ws://dronechallenge.ddns.net:1234');
+	conn.onopen = function(e) {
+		console.log("Connection established!");
+	};
+	conn.onmessage = function(e) {
+		console.log(e.data);
+		toggleThing();
+	};
+	function myFunction(){
+		console.log("Willll");
+		conn.send('Hello World!');
+		toggleThing();
+	}
+	function toggleThing(){
+		
+		var x = document.getElementById('myDIV');
+		if (x.style.display === 'none') {
+			x.style.display = 'block';
+		} else {
+			x.style.display = 'none';
+		}
+	}
+	</script>	
+</body>
+</html>
