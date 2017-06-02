@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Formulario Puntuaciones ESII Drone Challange</title>
-		<!--<link rel="stylesheet" type="text/css" href="../css/Form.css" />-->
+		<link rel="stylesheet" type="text/css" href="../css/Form.css" />
 		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
@@ -12,66 +12,70 @@
 		<div class="jumbotron text-center">
 			<h1>Formulario Puntuaciones ESII Drone Challenge</h1>
 		</div>
-		<div class="col-sm-6 col-md-3" id=marcadores>
-		
-			<div class="form-group">
-				<label for="sel1">Equipo</label>
-				<select class="form-control" id="sel1">
-					<option>Equipo 1</option>
-					<option>Equipo 2</option>
-					<option>Equipo 3</option>
-					<option>Equipo 4</option>
-			    </select>
-			</div> 
+		<div  id="marcadores">
+			<div class="col-sm-3 col-md-3 col-xs-3">
 			
-			<div class="form-group">
-				<label for="sel1">Circuito</label>
-				<select class="form-control" id="sel1">
-					<option>Circuito 1</option>
-					<option>Circuito 2</option>
-					<option>Circuito 3</option>
-			    </select>
-			</div>
-			
-			
-			<form action="../php/dbconntest.php" id="ranking">
-				<p>
-					Seleccionar Objetivos:<br>
-					
-					<div>
-						<div id="rojo" class="panel panel-danger">
-							<div class="panel-heading" ><input type="checkbox" name="Rojo" >  Marco Rojo<br></div>
-						</div>
-						
-						<div id="verde" class="panel panel-success"> 
-							<div class="panel-heading"><input type="checkbox" name="Verde">  Marco Verde<br></div>
-						</div>
-						
-						<div id="azul" class="panel panel-info">
-							<div class="panel-heading"><input type="checkbox" name="Azul" >  Marco Azul<br></div>
-						</div>
-						
-						<div id="orden" class="panel panel-warning">
-							<div class="panel-heading"><input type="checkbox" name="Order">  En Orden<br></div>
-						</div>
-						
-						<div id="base" class="panel panel-warning">	
-							<div class="panel-heading"><input type="checkbox" name="Base">  Base<br></div>
-						</div>
-					</div>
-				</p>
+				<div class="form-group">
+					<label for="sel1"><h3>Equipo</h3></label>
+					<select class="form-control" id="sel1">
+						<option><h3>Equipo 1</h3></option>
+						<option><h3>Equipo 2</h3></option>
+						<option><h3>Equipo 3</h3></option>
+						<option><h3>Equipo 4</h3></option>
+					</select>
+				</div> 
 				
 				<div class="form-group">
-					<label for="tyme">Tiempo(HH:MM:SS.DCM):</label>
-					<input type="text" name="Tiempo" class="form-control" id="tyme" autocomplete="off">
+					<label for="sel1"><h3>Circuito</h3></label>
+					<select class="form-control" id="sel1">
+						<option><h3>Circuito 1</h3></option>
+						<option><h3>Circuito 2</h3></option>
+						<option><h3>Circuito 3</h3></option>
+					</select>
 				</div>
-				<div>
+				
+				
+				<form action="../php/dbconntest.php" id="ranking">
 					<p>
-						<input type="submit" value="Enviar la informacion" class="btn btn-primary">
+						<h3>Seleccionar Objetivos:</h3><br>
+						<h4>
+						<div>
+							<div id="rojo" class="panel panel-danger">
+								<div class="panel-heading" ><input type="checkbox" name="Rojo" >  Marco Rojo</div>
+							</div>
+							
+							<div id="verde" class="panel panel-success"> 
+								<div class="panel-heading"><input type="checkbox" name="Verde">  Marco Verde<br></div>
+							</div>
+							
+							<div id="azul" class="panel panel-info">
+								<div class="panel-heading"><input type="checkbox" name="Azul" >  Marco Azul</div>
+							</div>
+							
+							<div id="orden" class="panel panel-warning">
+								<div class="panel-heading"><input type="checkbox" name="Order">  En Orden</div>
+							</div>
+							
+							<div id="base" class="panel panel-warning">	
+								<div class="panel-heading"><input type="checkbox" name="Base">  Base</div>
+							</div>
+						</div>
+						</h4>
 					</p>
-				</div>
-		</div>		
-		</form>
+					
+					<div class="form-group">
+						<label for="tyme"><h4>Tiempo(HH:MM:SS.DCM):</h4></label>
+						<input type="text" name="Tiempo" class="form-control" id="tyme" autocomplete="off">
+					</div>
+					<div>
+						<p>
+							<input type="submit" value="Enviar la informacion" class="btn btn-primary">
+						</p>
+					</div>
+				</form>
+			</div>	
+		</div>
+		
 
 	<body>
 
