@@ -15,7 +15,7 @@
 	$azul=$_GET['Azul'];
 	$orden=$_GET['Order'];
 	$vuelta=$_GET['Base'];		
-	$laptime=mysql_real_escape_string($_GET['Tiempo']);
+	$laptime="00:" . mysql_real_escape_string($_GET['Tiempo']);
 	$red=0;
 	$green=0;
 	$blue=0;
@@ -29,7 +29,7 @@
 	if ($vuelta == 'on') $base = 1;	
 	
 	$sql="INSERT INTO `REGISTROS` (`TEAM`,`TRACK`,`RED`,`GREEN`,`BLUE`,`ORDER`,`BASE`,`LAP_TIME`) VALUES (\"".$team."\",\"".$track."\",$red,$green,$blue,$order,$base,\"".$laptime."\")";	
-	//echo $sql;
+//	echo $sql;
 	if(!(mysql_query($sql))){
 						$response['success']=0;
 						die('Error: no se pudo ejecutar la consulta');
