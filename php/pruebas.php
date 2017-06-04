@@ -10,6 +10,7 @@
 			$sql = "SELECT * FROM `EQUIPOS` ORDER BY `SCORE` DESC,`BEST_TIME` ASC";
 ?>
 <?php
-	  echo mysql_num_rows($sql);         
-} ?>
+	 $result = mysql_query($sql); 
+	 echo mysql_num_rows($result);         
+ ?>
 
