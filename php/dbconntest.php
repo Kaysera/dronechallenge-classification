@@ -2,8 +2,7 @@
 	$dbhost='localhost';
 	$dbuser='root';
 	$dbpass='dronechallenge';
-	$database='ranking';
-	$reponse=array();
+	$database='ranking';	
 	if(!($iden=mysql_connect($dbhost,$dbuser,$dbpass))){
 		die('Error: no se pudo conectar con la base de datos');
 	}
@@ -34,12 +33,11 @@
 	
 	$sql="INSERT INTO `REGISTROS` (`TEAM`,`TRACK`,`RED`,`GREEN`,`BLUE`,`ORDER`,`BASE`,`LAP_TIME`) VALUES (\"".$team."\",\"".$track."\",$red,$green,$blue,$order,$base,\"".$laptime."\")";	
 //	echo $sql;
-	if(!(mysql_query($sql))){
-						$response['success']=0;
-						die('Error: no se pudo ejecutar la consulta');
-					}else{
-						$response['success']=1;
-					}
+	if(!(mysql_query($sql))) die('Error: no se pudo ejecutar la consulta');
+					
+	$sql2="SELECT UPDATETIMES()";
+	if(!(mysql_query($sql2))) die('Error: no se pudo ejecutar la consulta');
+					
 	mysql_close($iden);
 	header('Location: ../html/Formulario.html');
 ?>
