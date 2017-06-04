@@ -64,6 +64,7 @@
 								  echo "<td>".$row['BEST_TIME']."</td>";
 								  $counter++;
 							}
+							?>
 					</tbody>
 				</table>
 				</div>
