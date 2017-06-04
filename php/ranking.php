@@ -54,17 +54,14 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php 
-							$counter = 1;
-							while ($row = mysql_fetch_array($sql)){
-								  echo "<tr>";
-								  echo "<td>".$counter."</td>";
-								  echo "<td>".$row['TEAM']."</td>";
-								  echo "<td>".$row['SCORE']."</td>";
-								  echo "<td>".$row['BEST_TIME']."</td>";
-								  $counter++;
-							}
-							?>
+						<?php
+			               while ($row = mysql_fetch_array($query)) {?>
+			                   <tr>
+			                   <td><?php echo $row['TEAM'];?></td>
+			                   <td><?php echo $row['SCORE'];?></td>
+			                   <td><?php echo $row['BEST_TIME'];?></td>			                   
+			                   </tr>
+			              <?php  } ?>
 					</tbody>
 				</table>
 				</div>
