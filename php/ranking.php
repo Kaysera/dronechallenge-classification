@@ -77,13 +77,9 @@
 			};
 			conn.onmessage = function(e) {
 				console.log(e.data);
-				updateTable();
+				location.reload();				
 			};
-			function updateTable(){
-				console.log("Wiiiii");
-			//	setTimeout(function(){ location.reload();},1000);
-				location.reload();
-			};
+			
 		</script>	
 		
 	</body>
