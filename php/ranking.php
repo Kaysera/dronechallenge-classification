@@ -81,7 +81,8 @@
 			};
 			function updateTable(){
 				console.log("Wiiiii");
-				setTimeout(function(){ location.reload();},1000);
+			//	setTimeout(function(){ location.reload();},1000);
+				location.reload();
 			};
 		</script>	
 		
