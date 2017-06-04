@@ -62,9 +62,9 @@
 			                   <td><?php echo $counter;?></td>
 			                   <td><?php echo $row['TEAM'];?></td>
 			                   <td><?php echo $row['SCORE'];?></td>
-			                   <td><?php echo $row['BEST_TIME'];?></td>			                   
+			                   <td><?php echo substr($row['BEST_TIME'], 3, 9);?></td>			                   
 			                   </tr>
-			              <?php  }; $counter++;?>
+			              <?php  $counter++;}?>
 					</tbody>
 				</table>
 				</div>
@@ -78,9 +78,10 @@
 			conn.onmessage = function(e) {
 				console.log(e.data);
 				updateTable();
-			};			
-			function updateTable(){				
-				//TODO: INSERT LOGIC HERE
+			};
+			function updateTable(){
+				console.log("Wiiiii");
+				setTimeout(function(){ location.reload();},1000);
 			};
 		</script>	
 		

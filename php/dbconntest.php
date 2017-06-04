@@ -1,4 +1,8 @@
 <?php
+	
+	$contrasena=$_GET['pwd'];
+	$masterpass = 123456;
+	if ($contrasena == $masterpass){
 	$dbhost='localhost';
 	$dbuser='root';
 	$dbpass='dronechallenge';
@@ -13,7 +17,8 @@
 	$verde=$_GET['Verde'];
 	$azul=$_GET['Azul'];
 	$orden=$_GET['Order'];
-	$vuelta=$_GET['Base'];		
+	$vuelta=$_GET['Base'];
+			
 	$laptime=mysql_real_escape_string($_GET['Tiempo']);
 	$minutes=intval($laptime/60);
 	$precission=round(($laptime-intval($laptime))*1000);
@@ -40,5 +45,11 @@
 					
 	mysql_close($iden);
 	header('Location: ../html/Formulario.html');
+	}
+	else {
+		echo "Bad password";
+		sleep(3);		
+		header('Location: ../html/Formulario.html');
+	}
 ?>
 
