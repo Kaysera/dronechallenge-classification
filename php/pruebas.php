@@ -10,10 +10,6 @@
 			$sql = "SELECT * FROM `EQUIPOS` ORDER BY `SCORE` DESC,`BEST_TIME` ASC";
 ?>
 <?php
-	   while ($row = mysql_fetch_array($sql)) {	       
-	    echo $row['TEAM'];
-		echo $row['SCORE'];
-	    echo $row['BEST_TIME'];	                   
-		echo "\n";            
+	  echo mysql_num_rows($sql);         
 } ?>
 
