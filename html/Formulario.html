@@ -87,13 +87,26 @@
 					</div>
 					<div>
 						<p>
-							<input type="submit" value="Enviar la informacion" class="btn btn-primary">
+							<input type="submit" onClick="sendMessage();" value="Enviar la informacion" class="btn btn-primary">
 						</p>
 					</div>
 				</form>
 			</div>
 		</div>
 		</div>
+		<script>
+			var conn = new WebSocket('ws://dronechallenge.ddns.net:1234');
+			conn.onopen = function(e) {
+				console.log("Connection established!");
+			};
+			conn.onmessage = function(e) {
+				console.log(e.data);
+			};
+			function sendMessage(){
+				console.log("Wiii");
+				conn.send('Hello World!');
+			}
+		</script>
 	<body>
 
 </html>

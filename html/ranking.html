@@ -103,7 +103,19 @@
 				</div>
 			</div>
 		</div>
-
+	 	<script>
+			var conn = new WebSocket('ws://dronechallenge.ddns.net:1234');
+			conn.onopen = function(e) {
+				console.log("Connection established!");
+			};
+			conn.onmessage = function(e) {
+				console.log(e.data);
+				updateTable();
+			};			
+			function toggleThing(){				
+				//TODO: INSERT LOGIC HERE
+			};
+		</script>	
 		
 	</body>
 </html>
