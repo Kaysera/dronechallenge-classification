@@ -55,7 +55,7 @@
 					</thead>
 					<tbody>
 						<?php
-			               while ($row = mysql_fetch_array($query)) {?>
+			               while ($row = mysql_fetch_array($sql)) {?>
 			                   <tr>
 			                   <td><?php echo $row['TEAM'];?></td>
 			                   <td><?php echo $row['SCORE'];?></td>
