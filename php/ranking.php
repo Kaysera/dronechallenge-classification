@@ -56,13 +56,15 @@
 					<tbody>
 						<?php
 							$result = mysql_query($sql);
+							$counter = 1;
 			               while ($row = mysql_fetch_array($result)) {?>
 			                   <tr>
+			                   <td><?php echo $counter;?></td>
 			                   <td><?php echo $row['TEAM'];?></td>
 			                   <td><?php echo $row['SCORE'];?></td>
 			                   <td><?php echo $row['BEST_TIME'];?></td>			                   
 			                   </tr>
-			              <?php  } ?>
+			              <?php  }; $counter++;?>
 					</tbody>
 				</table>
 				</div>
