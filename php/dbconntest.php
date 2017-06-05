@@ -48,7 +48,7 @@
 		if(!(mysql_query($sql2))) die('Error: no se pudo ejecutar la consulta');
 						
 		mysql_close($iden);
-		header('Location: ../html/Formulario.html');
+		header('Location: formulario.php');
 	}
 	else {			
 		header('Location: ../html/pwf.html');
