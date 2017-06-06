@@ -32,15 +32,22 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="../index.html">Drone Challenge</a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="barra">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
 				</div>
-				<ul class="nav navbar-nav">
-					<li><a href="./ranking.php">Ranking</a></li>
-					<li><a href="./equipos.php">Puntuaciones por Equipo</a></li>	
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li  class="active"><a href="#">Formulario</a></li>
-				</ul>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="../index.html">Drone Challenge</a></li>
+						<li><a href="./ranking.php">Ranking</a></li>
+						<li><a href="./equipos.php">Puntuaciones por Equipo</a></li>	
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#"><span class="icon-bar"></span>Formulario</a></li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 		

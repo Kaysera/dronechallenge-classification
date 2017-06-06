@@ -34,15 +34,22 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="../index.html">Drone Challenge</a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="barra">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
 				</div>
-				<ul class="nav navbar-nav">
-					<li><a href="./ranking.php">Ranking</a></li>
-					<li  class="active"><a href="#">Puntuaciones por Equipo</a></li>	
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="./formulario.php">Formulario</a></li>
-				</ul>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="../index.html">Drone Challenge</a></li>
+						<li><a href="./ranking.php">Ranking</a></li>
+						<li class="active"><a href="#">Puntuaciones por Equipo</a></li>	
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="./formulario.php"><span class="icon-bar"></span>Formulario</a></li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 		
@@ -71,19 +78,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-10">
+			
+			<div class="col-md-2">
 				<div class="form-group">
 					<label for="sel1"><h3>Equipo</h3></label>
 					<select class="form-control" id="Equipo" name="Equipo" form="equipos">
 							<?php
 							$result = mysql_query($sql);
-			               while ($row = mysql_fetch_array($result)) {?> 
-			                   <option><h3><?php echo $row['TEAM'];?></h3></option>			                   
-			              <?php }?>
+						   while ($row = mysql_fetch_array($result)) {?> 
+							   <option><h3><?php echo $row['TEAM'];?></h3></option>			                   
+						  <?php }?>
 						
 					</select>
 				</div> 
+			</div>
 				
+			
+			<div class="col-md-8">
 				<div class="container-fluid">
 					<div class="table-responsive">
 					<table class="table table-condensed table-striped">
