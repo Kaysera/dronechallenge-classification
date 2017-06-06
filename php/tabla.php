@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Clasificaciones ESII Drone Challenge</title>
+		<title>Tiempo por Equipo ESII Drone Challenge</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -32,41 +32,42 @@
 		</div>
 		
 		<div class="container">
-		  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Leyenda</button>
-		  <div id="demo" class="collapse">
-			<p> <p> 
-			PC: Puntuacion del circuito<p>
-			TC: Tiempo del circuito<p>
-			PT: Puntuacion total<p> 
-			TT: Tiempo total<p>
-		  </div>
-		</div>
-		
-		<div class="content">
-			<div class="container-fluid">
-				<div class="table-responsive">
-				<table class="table table-condensed table-striped">
-					<thead>
-						<tr>
-							<th>Equipo</th>
-							<th>PC 1</th>
-							<th>TC 1</th>
-							<th>PC 2</th>
-							<th>TC 2</th>
-							<th>PC 3</th>
-							<th>TC 3</th>
-							<th>PT 1</th>
-							<th>TT 1</th>
-						</tr>
-					</thead>
-					<tbody>
-						
-					</tbody>
-				</table>
+			<div class="col-md-2">
+				<div class="container">
+					<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Leyenda</button>
+					<div id="demo" class="collapse">
+						<p><p> 
+						PC: Puntuacion del circuito<p>
+						TC: Tiempo del circuito<p>
+						PT: Puntuacion total<p> 
+						TT: Tiempo total<p>
+					</div>
 				</div>
 			</div>
-		</div>
-	 			
+			<div class="col-md-10">
+				<div class="container-fluid">
+					<div class="table-responsive">
+					<table class="table table-condensed table-striped">
+						<thead>
+							<tr>
+								<th>Equipo</th>
+								<th>PC 1</th>
+								<th>TC 1</th>
+								<th>PC 2</th>
+								<th>TC 2</th>
+								<th>PC 3</th>
+								<th>TC 3</th>
+								<th>PT 1</th>
+								<th>TT 1</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+					</table>
+					</div>
+				</div>
+	 		</div>	
 	</body>
 </html>
 
