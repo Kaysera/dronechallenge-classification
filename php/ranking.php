@@ -64,9 +64,9 @@
 			};
 			conn.onmessage = function(e) {
 				console.log(e.data);
-				$( "#table" ).load( "table.php #newtable" );
+				$( "#table" ).load( "tableranking.php #newtable", {query: "SELECT * FROM `PARRILLA` ORDER BY `SCORE` DESC,`BEST_TIME` ASC"});
 			};
-			$( "#table" ).load( "table.php #newtable", {query: "SELECT * FROM `PARRILLA` ORDER BY `SCORE` DESC,`BEST_TIME` ASC"});
+			$( "#table" ).load( "tableranking.php #newtable", {query: "SELECT * FROM `PARRILLA` ORDER BY `SCORE` DESC,`BEST_TIME` ASC"});
 			
 		</script>	
 		

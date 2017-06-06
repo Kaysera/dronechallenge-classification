@@ -82,7 +82,7 @@
 			<div class="col-md-2">
 				<div class="form-group">
 					<label for="sel1"><h3>Equipo</h3></label>
-					<select class="form-control" id="Equipo" name="Equipo" form="equipos">
+					<select class="form-control" id="Equipo" name="Equipo" form="equipos" onchange="changeTeam.call(this,event)">
 							<?php
 							$result = mysql_query($sql);
 						   while ($row = mysql_fetch_array($result)) {?> 
@@ -96,28 +96,32 @@
 			
 			<div class="col-md-8">
 				<div class="container-fluid">
-					<div class="table-responsive">
-					<table class="table table-condensed table-striped">
-						<thead>
-							<tr>
-								<th>Equipo</th>
-								<th>PC 1</th>
-								<th>TC 1</th>
-								<th>PC 2</th>
-								<th>TC 2</th>
-								<th>PC 3</th>
-								<th>TC 3</th>
-								<th>PT 1</th>
-								<th>TT 1</th>
-							</tr>
-						</thead>
-						<tbody>
-							
-						</tbody>
-					</table>
+					<div class="table-responsive" id="table">
+					
 					</div>
 				</div>
-	 		</div>	
+	 		</div>
+	 		<script>
+			var conn = new WebSocket('ws://dronechallenge.ddns.net:1234');
+			conn.onopen = function(e) {
+				console.log("Connection established!");
+			};
+			var query1 = "SELECT * FROM `EQUIPOS` WHERE TEAM = ";
+			var team = document.getElementById("Equipo").value;;
+			var querynew = query1.concat(team);
+			conn.onmessage = function(e) {
+				console.log(e.data);
+				$( "#table" ).load( "tableuser.php #newtable", {query: querynew});
+			};
+
+			$( "#table" ).load( "tableuser.php #newtable", {query: querynew});
+			function changeTeam(event){				
+				var team = this.options[this.selectedIndex].text;
+				var querynew = query1.concat(team);
+				$( "#table" ).load( "tableuser.php #newtable", {query: querynew});
+			}
+			
+		</script>		
 	</body>
 </html>
 
