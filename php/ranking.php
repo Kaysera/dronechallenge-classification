@@ -19,52 +19,20 @@
 	
 		<div class="jumbotron text-center">
 			<h2>Clasificaciones ESII Drone Challenge</h2>
+			
 			<div class="content">
 				<div class="container-fluid">
-					<div class=" col-sm-12 col-xs-12">
-						<img  src="../logos/todos.png" alt="todos" style="width:100%">
-					</div>	
+					<div >
+						<div class=" col-sm-12 col-xs-12">
+							<img  src="../logos/todos.png" alt="todos" style="width:100%">
+						</div>	
+					</div>
 				</div>	
 			</div>
-		</div>
-		<?php
-		  	$dbhost='localhost';
-			$dbuser='root';
-			$dbpass='dronechallenge';
-			$database='ranking';	
-			if(!($iden=mysql_connect($dbhost,$dbuser,$dbpass))){
-				die('Error: no se pudo conectar con la base de datos');
-			}
-			mysql_select_db($database);
-			$sql = "SELECT * FROM `PARRILLA` ORDER BY `SCORE` DESC,`BEST_TIME` ASC";
-		?>
+		</div>		
 		<div class="content">
 			<div class="container-fluid">
-				<div class="table-responsive">
-				<table class="table table-condensed table-striped">
-					<thead>
-						<tr>
-							<th>Posicion</th>
-							<th>Equipo</th>
-							<th>Puntuacion Total</th>
-							<th>Tiempo Total</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php
-							$result = mysql_query($sql);
-							$counter = 1;
-			               while ($row = mysql_fetch_array($result)) {?>
-			                   <tr>
-			                   <td><?php echo $counter;?></td>
-			                   <td><?php echo $row['TEAM'];?></td>
-			                   <td><?php echo $row['SCORE'];?></td>
-			                   <td><?php echo substr($row['BEST_TIME'], 3, 9);?></td>			                   
-			                   </tr>
-			              <?php  $counter++;}?>
-					</tbody>
-				</table>
-				</div>
+				<div class="table-responsive" id="table"></div>
 			</div>
 		</div>
 	 	<script>
@@ -74,8 +42,9 @@
 			};
 			conn.onmessage = function(e) {
 				console.log(e.data);
-				location.reload();				
+				$( "#table" ).load( "table.php #newtable" );
 			};
+			$( "#table" ).load( "table.php #newtable" );
 			
 		</script>	
 		
