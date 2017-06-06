@@ -44,32 +44,6 @@
 			</div>
 		</nav>
 		
-		<?php
-		  	$dbhost='localhost';
-			$dbuser='root';
-			$dbpass='dronechallenge';
-			$database='ranking';	
-			if(!($iden=mysql_connect($dbhost,$dbuser,$dbpass))){
-				die('Error: no se pudo conectar con la base de datos');
-			}
-			mysql_select_db($database);
-			$sql = "SELECT * FROM `PARRILLA` ORDER BY `SCORE` DESC,`BEST_TIME` ASC";
-		?>
-					<div >
-						<div class=" col-sm-12 col-xs-12">
-							<img  src="../logos/todos.png" alt="todos" style="width:100%">
-						</div>	
-					</div>
-				</div>	
-			</div>
-		</div>		
-					<div >
-						<div class=" col-sm-12 col-xs-12">
-							<img  src="../logos/todos.png" alt="todos" style="width:100%">
-						</div>	
-					</div>
-				</div>	
-			</div>
 		</div>		
 		<div class="content">
 			<div class="container-fluid">
