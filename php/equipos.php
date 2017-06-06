@@ -46,6 +46,18 @@
 			</div>
 		</nav>
 		
+		<?php
+		  	$dbhost='localhost';
+			$dbuser='root';
+			$dbpass='dronechallenge';
+			$database='ranking';	
+			if(!($iden=mysql_connect($dbhost,$dbuser,$dbpass))){
+				die('Error: no se pudo conectar con la base de datos');
+			}
+			mysql_select_db($database);
+			$sql = "SELECT * FROM `EQUIPOS`";
+		?>
+		
 		<div class="container">
 			<div class="col-md-2">
 				<div class="container">
@@ -60,7 +72,6 @@
 				</div>
 			</div>
 			<div class="col-md-10">
-			
 				<div class="form-group">
 					<label for="sel1"><h3>Equipo</h3></label>
 					<select class="form-control" id="Equipo" name="Equipo" form="equipos">

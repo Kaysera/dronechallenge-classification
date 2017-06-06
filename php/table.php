@@ -28,8 +28,8 @@
 						<tr>
 							<th>Posicion</th>
 							<th>Equipo</th>
-							<th>Puntuacion Total</th>
-							<th>Tiempo Total</th>
+							<th>Puntuacion</th>
+							<th>Tiempo</th>
 						</tr>
 					</thead>
 					<tbody>
