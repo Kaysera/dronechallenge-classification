@@ -32,13 +32,13 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="barra">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#barra">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
 				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
+				<div class="collapse navbar-collapse" id="barra">
 					<ul class="nav navbar-nav">
 						<li><a href="../index.html">Drone Challenge</a></li>
 						<li class="active"><a href="#">Ranking</a></li>
