@@ -22,7 +22,6 @@
 			
 			<div class="content">
 				<div class="container-fluid">
-<<<<<<< HEAD
 					<div class="col-sm-12 col-xs-12">
 						<img  src="../logos/todos.png" alt="todos" style="width:100%">
 					</div>	
@@ -56,7 +55,6 @@
 			mysql_select_db($database);
 			$sql = "SELECT * FROM `PARRILLA` ORDER BY `SCORE` DESC,`BEST_TIME` ASC";
 		?>
-=======
 					<div >
 						<div class=" col-sm-12 col-xs-12">
 							<img  src="../logos/todos.png" alt="todos" style="width:100%">
@@ -65,7 +63,14 @@
 				</div>	
 			</div>
 		</div>		
->>>>>>> 0eceef4cb63343cb312f6e05196f1e3e05b99bbd
+					<div >
+						<div class=" col-sm-12 col-xs-12">
+							<img  src="../logos/todos.png" alt="todos" style="width:100%">
+						</div>	
+					</div>
+				</div>	
+			</div>
+		</div>		
 		<div class="content">
 			<div class="container-fluid">
 				<div class="table-responsive" id="table"></div>
