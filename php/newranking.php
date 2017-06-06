@@ -42,7 +42,7 @@
 			};
 			conn.onmessage = function(e) {
 				console.log(e.data);
-				location.reload();				
+				$( "#table" ).load( "table.php #newtable" );
 			};
 			$( "#table" ).load( "table.php #newtable" );
 			

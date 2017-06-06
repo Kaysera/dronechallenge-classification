@@ -39,7 +39,7 @@
 				die('Error: no se pudo conectar con la base de datos');
 			}
 			mysql_select_db($database);
-			$sql = "SELECT * FROM `EQUIPOS` ORDER BY `SCORE` DESC,`BEST_TIME` ASC";
+			$sql = "SELECT * FROM `PARRILLA` ORDER BY `SCORE` DESC,`BEST_TIME` ASC";
 		?>
 		<div class="content">
 			<div class="container-fluid">
