@@ -20,7 +20,7 @@
 				die('Error: no se pudo conectar con la base de datos');
 			}
 			mysql_select_db($database);
-			$sql = "SELECT * FROM `PARRILLA` ORDER BY `SCORE` DESC,`BEST_TIME` ASC";
+			$sql = $_POST['query'];
 		?>		
 				<div class="table-responsive" id="newtable">
 				<table class="table table-condensed table-striped" >

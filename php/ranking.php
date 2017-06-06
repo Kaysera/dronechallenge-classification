@@ -59,7 +59,7 @@
 				console.log(e.data);
 				$( "#table" ).load( "table.php #newtable" );
 			};
-			$( "#table" ).load( "table.php #newtable" );
+			$( "#table" ).load( "table.php #newtable", {query: "SELECT * FROM `PARRILLA` ORDER BY `SCORE` DESC,`BEST_TIME` ASC"});
 			
 		</script>	
 		
