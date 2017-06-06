@@ -60,6 +60,19 @@
 				</div>
 			</div>
 			<div class="col-md-10">
+			
+				<div class="form-group">
+					<label for="sel1"><h3>Equipo</h3></label>
+					<select class="form-control" id="Equipo" name="Equipo" form="equipos">
+							<?php
+							$result = mysql_query($sql);
+			               while ($row = mysql_fetch_array($result)) {?> 
+			                   <option><h3><?php echo $row['TEAM'];?></h3></option>			                   
+			              <?php }?>
+						
+					</select>
+				</div> 
+				
 				<div class="container-fluid">
 					<div class="table-responsive">
 					<table class="table table-condensed table-striped">
