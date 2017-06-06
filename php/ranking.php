@@ -19,14 +19,32 @@
 	
 		<div class="jumbotron text-center">
 			<h2>Clasificaciones ESII Drone Challenge</h2>
+			
 			<div class="content">
 				<div class="container-fluid">
-					<div class=" col-sm-12 col-xs-12">
+<<<<<<< HEAD
+					<div class="col-sm-12 col-xs-12">
 						<img  src="../logos/todos.png" alt="todos" style="width:100%">
 					</div>	
 				</div>	
 			</div>
 		</div>
+		
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="../index.html">Drone Challenge</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li  class="active"><a href="#">Ranking</a></li>
+					<li><a href="./equipos.php">Puntuaciones por Equipo</a></li>	
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="./formulario.php">Formulario</a></li>
+				</ul>
+			</div>
+		</nav>
+		
 		<?php
 		  	$dbhost='localhost';
 			$dbuser='root';
@@ -38,33 +56,19 @@
 			mysql_select_db($database);
 			$sql = "SELECT * FROM `PARRILLA` ORDER BY `SCORE` DESC,`BEST_TIME` ASC";
 		?>
+=======
+					<div >
+						<div class=" col-sm-12 col-xs-12">
+							<img  src="../logos/todos.png" alt="todos" style="width:100%">
+						</div>	
+					</div>
+				</div>	
+			</div>
+		</div>		
+>>>>>>> 0eceef4cb63343cb312f6e05196f1e3e05b99bbd
 		<div class="content">
 			<div class="container-fluid">
-				<div class="table-responsive">
-				<table class="table table-condensed table-striped">
-					<thead>
-						<tr>
-							<th>Posicion</th>
-							<th>Equipo</th>
-							<th>Puntuacion Total</th>
-							<th>Tiempo Total</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php
-							$result = mysql_query($sql);
-							$counter = 1;
-			               while ($row = mysql_fetch_array($result)) {?>
-			                   <tr>
-			                   <td><?php echo $counter;?></td>
-			                   <td><?php echo $row['TEAM'];?></td>
-			                   <td><?php echo $row['SCORE'];?></td>
-			                   <td><?php echo substr($row['BEST_TIME'], 3, 9);?></td>			                   
-			                   </tr>
-			              <?php  $counter++;}?>
-					</tbody>
-				</table>
-				</div>
+				<div class="table-responsive" id="table"></div>
 			</div>
 		</div>
 	 	<script>
@@ -74,11 +78,14 @@
 			};
 			conn.onmessage = function(e) {
 				console.log(e.data);
-				location.reload();				
+				$( "#table" ).load( "table.php #newtable" );
 			};
+			$( "#table" ).load( "table.php #newtable" );
 			
 		</script>	
 		
+		
+
 	</body>
 </html>
 

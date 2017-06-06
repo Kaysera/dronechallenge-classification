@@ -31,6 +31,21 @@
 			</div>
 		</div>
 		
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="../index.html">Drone Challenge</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="./ranking.php">Ranking</a></li>
+					<li  class="active"><a href="#">Puntuaciones por Equipo</a></li>	
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="./formulario.php">Formulario</a></li>
+				</ul>
+			</div>
+		</nav>
+		
 		<div class="container">
 			<div class="col-md-2">
 				<div class="container">

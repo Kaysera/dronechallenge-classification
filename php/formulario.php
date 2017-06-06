@@ -13,20 +13,37 @@
 		max-width: 700px;
 		margin: auto;
 	}
+	
 	</style>
 	
 	<body>
 	
 		<div class="jumbotron text-center">
-			<h2>Formulario Puntuaciones ESII Drone Challenge</h2>
+			<h2>Clasificaciones ESII Drone Challenge</h2>
 			<div class="content">
 				<div class="container-fluid">
 					<div class="col-sm-12 col-xs-12">
 						<img  src="../logos/todos.png" alt="todos" style="width:100%">
 					</div>	
 				</div>	
-			</div>	
+			</div>
 		</div>
+		
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="../index.html">Drone Challenge</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="./ranking.php">Ranking</a></li>
+					<li><a href="./equipos.php">Puntuaciones por Equipo</a></li>	
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li  class="active"><a href="#">Formulario</a></li>
+				</ul>
+			</div>
+		</nav>
+		
 		<?php
 		  	$dbhost='localhost';
 			$dbuser='root';
@@ -122,6 +139,8 @@
 				conn.send('Update me again!');
 			}
 		</script>
+		
+		
 	<body>
 
 </html>
