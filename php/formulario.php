@@ -16,15 +16,14 @@
 	</style>
 	
 	<body>
+	
 		<div class="jumbotron text-center">
 			<h2>Formulario Puntuaciones ESII Drone Challenge</h2>
 			<div class="content">
 				<div class="container-fluid">
-					<div >
-						<div class="col-sm-12 col-xs-12">
-							<img  src="../logos/todos.png" alt="todos" style="width:100%">
-						</div>	
-					</div>
+					<div class="col-sm-12 col-xs-12">
+						<img  src="../logos/todos.png" alt="todos" style="width:100%">
+					</div>	
 				</div>	
 			</div>	
 		</div>
