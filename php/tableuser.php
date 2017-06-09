@@ -53,11 +53,21 @@
 			                   <td><?php echo substr($row['TIMEC1'], 3, 9);?></td>
 			                   </tr><tr>
 			                    <td><?php echo $counter; $counter++;?></td>
-			                   <td><?php echo $row['SCOREC2'];?></td>
+			                   <td><?php if ($row['SCOREC2'] != "0"){
+			                   	 echo $row['SCOREC2'];
+			                   } else {
+			                   	 echo $nq;
+			                   }
+			                   ?></td>
 			                   <td><?php echo substr($row['TIMEC2'], 3, 9);?></td>	
 			                   </tr><tr>
 			                    <td><?php echo $counter; $counter++;?></td>
-			                   <td><?php echo $row['SCOREC3'];?></td>
+			                   <td><?php if ($row['SCOREC3'] != "0"){
+			                   	 echo $row['SCOREC3'];
+			                   } else {
+			                   	 echo $nq;
+			                   }
+			                   ?></td>
 			                   <td><?php echo substr($row['TIMEC3'], 3, 9);?></td>				                   
 			                   </tr>
 			              <?php  }?>			              
