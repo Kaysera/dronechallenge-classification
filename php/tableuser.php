@@ -42,7 +42,7 @@
 			                   <tr>	
 			                   <td><?php echo $counter; $counter++;?></td>
 			                   <td><?php if ($row['SCOREC1'] != 0) echo $row['SCOREC1'];
-			                   				else echo NO CLASIFICADO?></td>
+			                   				else echo NO CLASIFICADO;?></td>
 			                   <td><?php echo substr($row['TIMEC1'], 3, 9);?></td>
 			                   </tr><tr>
 			                    <td><?php echo $counter; $counter++;?></td>
