@@ -43,12 +43,13 @@
 							$result = mysql_query($sql);
 							
 			               while ($row = mysql_fetch_array($result)) {?>
-			                   <tr>			                   
-			                   <td><?php echo $row['TEAM'];?></td>
+			                   <tr>	
 			                   <td><?php echo $row['SCOREC1'];?></td>
 			                   <td><?php echo substr($row['TIMEC1'], 3, 9);?></td>
+			                   </tr><tr>
 			                   <td><?php echo $row['SCOREC2'];?></td>
 			                   <td><?php echo substr($row['TIMEC2'], 3, 9);?></td>	
+			                   </tr><tr>
 			                   <td><?php echo $row['SCOREC3'];?></td>
 			                   <td><?php echo substr($row['TIMEC3'], 3, 9);?></td>				                   
 			                   </tr>
