@@ -111,14 +111,14 @@
 			var querynew = query1.concat(team);
 			conn.onmessage = function(e) {
 				console.log(e.data);
-				$( "#table" ).load( "tableuser.php #newtable", {query: team});
+				$( "#table" ).load( "tableuser.php #newtable", {name: team});
 			};
 
-			$( "#table" ).load( "tableuser.php #newtable", {query: team});
+			$( "#table" ).load( "tableuser.php #newtable", {name: team});
 			function changeTeam(event){				
 				var team = this.options[this.selectedIndex].text;
 				var querynew = query1.concat(team);
-				$( "#table" ).load( "tableuser.php #newtable", {query: team});
+				$( "#table" ).load( "tableuser.php #newtable", {name: team});
 			}
 			
 		</script>		
