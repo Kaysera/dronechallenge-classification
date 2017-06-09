@@ -67,19 +67,6 @@
 		
 		<div class="container">
 			<div class="col-md-2">
-				<div class="container">
-					<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Leyenda</button>
-					<div id="demo" class="collapse">
-						<p><p> 
-						PC: Puntuacion del circuito<p>
-						TC: Tiempo del circuito<p>
-						PT: Puntuacion total<p> 
-						TT: Tiempo total<p>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col-md-2">
 				<div class="form-group">
 					<label for="sel1"><h3>Equipo</h3></label>
 					<select class="form-control" id="Equipo" name="Equipo" form="equipos" onchange="changeTeam.call(this,event)">
