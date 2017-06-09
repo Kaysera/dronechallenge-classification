@@ -38,7 +38,7 @@
 						<?php
 							$result = mysql_query($sql);
 							$counter = 1;
-							$nq = "NO CLASIFICADO";
+							$nq = "No clasificado";
 			               while ($row = mysql_fetch_array($result)) {?>
 			                   <tr>	
 			                   <td><?php echo $counter; $counter++;?></td>
