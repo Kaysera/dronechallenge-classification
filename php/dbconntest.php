@@ -2,8 +2,10 @@
 	
 	$contrasena=$_GET['pwd'];
 	$masterpass = 123456;
+	$laptime=mysql_real_escape_string($_GET['Tiempo']);
+	$timeMatch=preg_match("[0-9]{1,3}+(.[0-9]+)?", $laptime);
 
-	if ($contrasena == $masterpass){
+	if ($contrasena == $masterpass && $timeMatch == 1){
 		$dbhost='localhost';
 		$dbuser='root';
 		$dbpass='dronechallenge';
@@ -21,7 +23,7 @@
 		$orden=$_GET['Order'];
 		$vuelta=$_GET['Base'];
 				
-		$laptime=mysql_real_escape_string($_GET['Tiempo']);
+		
 		$minutes=intval($laptime/60);
 		$precission=round(($laptime-intval($laptime))*1000);
 		$laptime=$laptime%60;
@@ -50,8 +52,11 @@
 		mysql_close($iden);
 		header('Location: formulario.php');
 	}
-	else {			
+	else if ($contrasena != $masterpass) {			
 		header('Location: ../html/pwf.html');
+	}
+	else{
+		header('Location: ../html/tf.html');
 	}
 ?>
 
