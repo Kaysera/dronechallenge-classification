@@ -31,10 +31,7 @@
 							<tr>								
 								<th>Circuito</th>
 								<th>Puntuacion</th>
-								<th>Tiempo</th>
-								<th>TC 2</th>
-								<th>PC 3</th>
-								<th>TC 3</th>
+								<th>Tiempo</th>								
 							</tr>
 						</thead>
 						<tbody>
