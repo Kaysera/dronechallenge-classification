@@ -28,27 +28,27 @@
 				<div class="table-responsive" id="newtable">
 					<table class="table table-condensed table-striped">
 						<thead>
-							<tr>
-								<th>Equipo</th>
-								<th>PC 1</th>
-								<th>TC 1</th>
-								<th>PC 2</th>
-								<th>TC 2</th>
-								<th>PC 3</th>
-								<th>TC 3</th>
+							<tr>								
+								<th>Circuito</th>
+								<th>Puntuacion</th>
+								<th>Tiempo</th>								
 							</tr>
 						</thead>
 						<tbody>
 						<?php
 							$result = mysql_query($sql);
-							
+							$counter = 1;
 			               while ($row = mysql_fetch_array($result)) {?>
-			                   <tr>			                   
-			                   <td><?php echo $row['TEAM'];?></td>
+			                   <tr>	
+			                   <td><?php echo $counter; $counter++;?></td>
 			                   <td><?php echo $row['SCOREC1'];?></td>
 			                   <td><?php echo substr($row['TIMEC1'], 3, 9);?></td>
+			                   </tr><tr>
+			                    <td><?php echo $counter; $counter++;?></td>
 			                   <td><?php echo $row['SCOREC2'];?></td>
 			                   <td><?php echo substr($row['TIMEC2'], 3, 9);?></td>	
+			                   </tr><tr>
+			                    <td><?php echo $counter; $counter++;?></td>
 			                   <td><?php echo $row['SCOREC3'];?></td>
 			                   <td><?php echo substr($row['TIMEC3'], 3, 9);?></td>				                   
 			                   </tr>
