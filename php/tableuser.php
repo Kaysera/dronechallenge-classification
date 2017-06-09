@@ -21,7 +21,7 @@
 			}
 			mysql_select_db($database);
 			$team = $_POST['name'];
-			$sql = "SELECT * FROM `EQUIPOS` WHERE TEAM = \"".$team."\" ORDER BY `SCORE` DESC,`BEST_TIME` ASC ";
+			$sql = "SELECT * FROM `EQUIPOS` WHERE TEAM = \"".$team."\" ORDER BY `SCORE` DESC,`BEST_TIME` ASC";
 		?>		
 
 
@@ -36,8 +36,6 @@
 								<th>TC 2</th>
 								<th>PC 3</th>
 								<th>TC 3</th>
-								<th>PT 1</th>
-								<th>TT 1</th>
 							</tr>
 						</thead>
 						<tbody>
