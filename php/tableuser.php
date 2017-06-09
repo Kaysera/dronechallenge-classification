@@ -38,12 +38,17 @@
 						<?php
 							$result = mysql_query($sql);
 							$counter = 1;
-							$nq = "NO CLASIFICADO"
+							$nq = "NO CLASIFICADO";
 			               while ($row = mysql_fetch_array($result)) {?>
 			                   <tr>	
 			                   <td><?php echo $counter; $counter++;?></td>
 
-			                   <td><?php echo wiiii;?></td>
+			                   <td><?php if ($row['SCOREC1'] != "0"){
+			                   	 echo $row['SCOREC1'];
+			                   } else {
+			                   	 echo $nq;
+			                   }
+			                   ?></td>
 
 			                   <td><?php echo substr($row['TIMEC1'], 3, 9);?></td>
 			                   </tr><tr>
