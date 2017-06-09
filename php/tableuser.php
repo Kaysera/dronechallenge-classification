@@ -21,7 +21,7 @@
 			}
 			mysql_select_db($database);
 			$team = $_POST['name'];
-			$sql = "SELECT * FROM `EQUIPOS` ORDER BY `SCORE` DESC,`BEST_TIME` ASC WHERE TEAM = \"".$team."\"";
+			$sql = "SELECT * FROM `EQUIPOS` WHERE TEAM = \"".$team."\" ORDER BY `SCORE` DESC,`BEST_TIME` ASC ";
 		?>		
 
 
@@ -54,8 +54,7 @@
 			                   <td><?php echo $row['SCOREC3'];?></td>
 			                   <td><?php echo substr($row['TIMEC3'], 3, 9);?></td>				                   
 			                   </tr>
-			              <?php  }?>
-			              <tr><td><?php echo $sql;?>
+			              <?php  }?>			              
 					</tbody>
 					</table>
 				
