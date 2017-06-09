@@ -20,7 +20,8 @@
 				die('Error: no se pudo conectar con la base de datos');
 			}
 			mysql_select_db($database);
-			$sql = "SELECT * FROM `EQUIPOS` ORDER BY `SCORE` DESC,`BEST_TIME` ASC ";
+			$team = $_POST['name'];
+			$sql = "SELECT * FROM `EQUIPOS` ORDER BY `SCORE` DESC,`BEST_TIME` ASC WHERE TEAM = \"".$team."\"";
 		?>		
 
 
