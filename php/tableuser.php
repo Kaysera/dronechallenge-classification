@@ -55,7 +55,7 @@
 			                   <td><?php echo substr($row['TIMEC3'], 3, 9);?></td>				                   
 			                   </tr>
 			              <?php  }?>
-			              <tr><td><?php echo $team;?>
+			              <tr><td><?php echo $sql;?>
 					</tbody>
 					</table>
 				
